@@ -1,0 +1,144 @@
+body {
+    padding: 20px;
+}
+
+.logo {
+    padding: 15px;
+    width: 120px;
+}
+
+.project_heading {
+    width: 100%;
+    color: rgb(23, 117, 80);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif ;
+    font-size: 10vh;
+    font-weight: 800;
+    margin: 0px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.project_section {
+    width: 100%;
+    margin: 10px 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.img_grid {
+    display: grid;
+    grid: auto-flow / repeat(3, 80px);
+    width: 500px;
+    justify-content: space-evenly;
+}
+
+
+.project_image {
+    height: 295px;
+    width: 300px;
+}
+
+
+.project_desc {
+    /* with relation to the parent image - 50% of project_section */
+    /* project_section is just 50% of parent then project_desc is 50% of that - so 25% total */
+    text-align: center;
+    width: 80%;
+    display: inline-block;
+    margin: 0;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif ;
+    font-size: 3vh;
+    font-weight: 500;
+}
+
+
+/* make images responsive - when screen gets to certain size, change image size and image margin */
+/* this works when you want to change layout for phone */
+@media (max-width: 550px) {
+    .project_image {
+        width: 360px;
+        margin-top: 20px;
+    }
+}
+
+button {
+    background-color: #362415;
+    border: none;
+    color: white;
+    padding: 18px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 12px;
+}
+
+button:hover {
+    background-color: #555555; /* Dark grey */
+}
+
+.contentAnimation {
+    margin: 40px 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#left_arrow{
+    animation-name: moveLeft;
+    animation-duration: 4.5s;
+    animation-iteration-count: infinite;
+}
+
+#right_arrow{
+    animation-name: moveRight;
+    animation-duration: 4.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes moveLeft {
+    0% {
+        transform: translateX(-5vw);
+    }
+    50% {
+        transform: translateX(-2vw);
+    }
+    100% {
+        transform: translateX(-5vw);
+    }
+}
+
+@keyframes moveRight {
+    0% {
+        transform: translateX(5vw);
+    }
+    50% {
+        transform: translateX(2vw);
+    }
+    100% {
+        transform: translateX(5vw);
+    }
+}
+
+
+footer {
+    padding: 20px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif ;
+    text-align: center;
+    font-size: 2.3vh;
+    font-style: italic;
+}

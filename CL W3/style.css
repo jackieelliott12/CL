@@ -1,0 +1,47 @@
+body {
+    background-color: rgb(203, 129, 243);
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.project_heading {
+    font-size: 30px;
+    margin: 50px 20px 30px;
+}
+
+.project_section {
+    margin: 50px;
+}
+
+.project_container {
+    margin: 30px;
+}
+
+#letterInput {
+    padding: 10px;
+    font-size: 16px;
+    width: 200px;
+}
+
+#enterButton {
+    padding: 10px 15px;
+    font-size: 16px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#displayArea {
+    margin-top: 50px;
+    font-size: 48px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+#displayImage {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; 
+}

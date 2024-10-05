@@ -145,14 +145,29 @@ let genreMapping = {
 
 // p5.js code
 function setup() {
-  createCanvas(800, 400);
+  createCanvas(800, 340);
 }
 
 function draw() {
   background('#e6ffff');
   fill('black');
+  textStyle(BOLD);
   textSize(18);
   textAlign(LEFT, CENTER);
+
+  //notes
+  circle(690, 100, 20, 20);
+  circle(640, 100, 20, 20);
+  strokeWeight(4);
+  line(650, 50, 700, 50);
+  line(650, 100, 650, 50);
+  line(700, 100, 700, 50);
+
+  circle(730, 180, 20, 20);
+  circle(680, 180, 20, 20);
+  line(690, 130, 740, 130);
+  line(690, 130, 690, 180);
+  line(740, 130, 740, 180);
 
   if (searched) {
     if (artistName === '') {
@@ -167,15 +182,18 @@ function draw() {
   }
 
   if (currentGenre === 'Metal') {
+    textStyle(NORMAL);
     fill('#00e64d');
     text('Age: Millenial or Gen X', 40, 40 + 60);
     text('Hobbies: Hiking, Watching TV & Movies', 40, 40 + 90);
     text('Personality: Gentle, Creative, Introverted, Empathetic', 40, 40 + 120);
     text('Life: Small Rural Community', 40, 40 + 150);
     text('Social Media Choice: Reddit', 40, 40 + 180);
-    text('Concerns: Inflation & the Cost of Living', 40, 40 + 210);
+    text('Concerns: The Cost of Living. Prudent in Spending Money', 40, 40 + 210);
+    text('Music Taste: Prefers Physical Copies & Listening to Albums', 40, 40 + 240);
 
   } else if (currentGenre === 'Pop') {
+    textStyle(NORMAL);
     fill('#e60099');
     text('Age: Gen Z - Gen X', 40, 40 + 60);
     text('Hobbies: Shopping, Fashion, Watching TV & Movies', 40, 40 + 90);
@@ -183,8 +201,10 @@ function draw() {
     text('Life: Traveler', 40, 40 + 150);
     text('Social Media Choice: Facebook & Twitter/X', 40, 40 + 180);
     text('Concerns: Social Life', 40, 40 + 210);
+    text('Music Taste: Prefers Streaming & Radio. Preference in TV Music Performances', 40, 40 + 240);
 
   } else if (currentGenre === 'Rock') {
+    textStyle(NORMAL);
     fill('red');
     text('Age: Millenial or Gen X', 40, 40 + 60);
     text('Hobbies: Watching Movies & TV, Listening to Albums', 40, 40 + 90);
@@ -192,8 +212,10 @@ function draw() {
     text('Life: Small Rural Community', 40, 40 + 150);
     text('Social Media Choice: Facebook & YouTube', 40, 40 + 180);
     text('Concerns: Inflation & the Cost of Living', 40, 40 + 210);
+    text('Music Taste: Prefers Satellite Radio, Physical Copies & Listening to Albums', 40, 40 + 240);
 
   } else if (currentGenre === 'HipHop') {
+    textStyle(NORMAL);
     fill('orange');
     text('Age: Millenial or Gen Z', 40, 40 + 60);
     text('Hobbies: Swimming, Playing Basketball, Playing Video Games', 40, 40 + 90);
@@ -201,8 +223,10 @@ function draw() {
     text('Life: Urban & Bustling Communities', 40, 40 + 150);
     text('Social Media Choice: Instagram & YouTube', 40, 40 + 180);
     text('Concerns: Poverty & the Cost of Living', 40, 40 + 210);
+    text('Music Taste: Prefers Spotify & Pandora. Preference in Playlists & Music Videos', 40, 40 + 240);
 
   } else if (currentGenre === 'Jazz') {
+    textStyle(NORMAL);
     fill('blue');
     text('Age: Gen Z - Gen X', 40, 40 + 60);
     text('Hobbies: Supporting Local Music Events & Learning New Skills', 40, 40 + 90);
@@ -210,17 +234,21 @@ function draw() {
     text('Life: City Life', 40, 40 + 150);
     text('Social Media Choice: Unknown', 40, 40 + 180);
     text('Concerns: Cost of Education', 40, 40 + 210);
+    text('Music Taste: Prefers Music Streaming & Live Listening', 40, 40 + 240);
 
   } else if (currentGenre === 'Country') {
+    textStyle(NORMAL);
     fill('#e6b800');
     text('Age: Millenial', 40, 40 + 60);
-    text('Hobbies: Hunting, Fishing, Baking', 40, 40 + 90);
+    text('Hobbies: Hunting, Fishing, Baking, & Watching Football', 40, 40 + 90);
     text('Hard-Working, Conventional, Conservative, Outgoing', 40, 40 + 120);
     text('Life: Small Rural Community', 40, 40 + 150);
     text('Social Media Choice: Facebook', 40, 40 + 180);
     text('Concerns: Living an Honest & Respectable Lifestyle', 40, 40 + 210);
+    text('Music Taste: Prefers Listening to the Radio', 40, 40 + 240);
 
   } else if (currentGenre === 'Electronic') {
+    textStyle(NORMAL);
     fill('purple');
     text('Age: Millenial or Gen Z', 40, 40 + 60);
     text('Hobbies: Playing Video Games/Esports, Going to Live Music Events', 40, 40 + 90);
@@ -228,8 +256,10 @@ function draw() {
     text('Life: Small Town Community', 40, 40 + 150);
     text('Social Media Choice: Snapchat & YouTube', 40, 40 + 180);
     text('Concerns: Learning More', 40, 40 + 210);
+    text('Music Taste: Prefers Spotify, Music Festivals, and Live Streaming', 40, 40 + 240);
 
   } else if (currentGenre === 'Classical') {
+    textStyle(NORMAL);
     fill('#8600b3');
     text('Age: Millenial', 40, 40 + 60);
     text('Hobbies: Art, Literature & Learning More', 40, 40 + 90);
@@ -237,5 +267,6 @@ function draw() {
     text('Life: Urban Cities', 40, 40 + 150);
     text('Social Media Choice: Twitter/X', 40, 40 + 180);
     text('Concerns: Cost of Education', 40, 40 + 210);
+    text('Music Taste: Prefers Physical Copies Like CDs', 40, 40 + 240);
   }
 }

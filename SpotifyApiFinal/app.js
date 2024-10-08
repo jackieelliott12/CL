@@ -156,15 +156,15 @@ function draw() {
   textAlign(LEFT, CENTER);
 
   //notes
-  circle(690, 100, 20, 20);
-  circle(640, 100, 20, 20);
+  circle(690, 100, 20);
+  circle(640, 100, 20);
   strokeWeight(4);
   line(650, 50, 700, 50);
   line(650, 100, 650, 50);
   line(700, 100, 700, 50);
 
-  circle(730, 180, 20, 20);
-  circle(680, 180, 20, 20);
+  circle(730, 180, 20);
+  circle(680, 180, 20);
   line(690, 130, 740, 130);
   line(690, 130, 690, 180);
   line(740, 130, 740, 180);
